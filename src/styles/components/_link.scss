@@ -1,0 +1,32 @@
+.link {
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-200);
+  color: var(--clr-400);
+  text-transform: capitalize;
+  display: inline-block;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 80%;
+    aspect-ratio: 1;
+    right: -1.5em;
+    top: 50%;
+    translate: 0 -50%;
+    transform: rotateZ(45deg);
+    background-image: url("../../src/assets/icons/arrow.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform-origin: center;
+    transition: transform 150ms ease;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:hover::after {
+    transform: rotateZ(90deg);
+  }
+}

@@ -1,0 +1,78 @@
+@use "../abstracts/variables" as var;
+
+.booking-button-widget {
+  --_padding: .25em;
+  display: flex;
+  align-items: center;
+  padding: var(--_padding);
+  padding-left: 1.25em;
+  background-color: var(--clr-100);
+  border-radius: 50vh;
+  width: max-content;
+
+  span.nav__availability {
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-100);
+    font-weight: var(--fw-Medium);
+    color: var(--text-50);
+    margin-right: 2em;
+  }
+
+  span.icon {
+    display: inline-block;
+    position: relative;
+    width: 20px;
+    aspect-ratio: 1;
+    margin-right: .5em;
+    isolation: isolate;
+
+    >* {
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+    }
+
+    &--inner {
+      --_start-size: 10px;
+      --_end-size: 12px;
+      width: var(--_start-size);
+      aspect-ratio: 1;
+      background-color: var(--clr-400);
+      border-radius: 50%;
+      animation: scale-up-down 800ms ease infinite alternate;
+    }
+
+    &--outer {
+      --_start-size: 10px;
+      --_end-size: 21px;
+      width: var(--_start-size);
+      aspect-ratio: 1;
+      background-color: var(--clr-300);
+      border-radius: 50%;
+      z-index: -1;
+      animation: scale-up-down 800ms ease infinite alternate;
+    }
+  }
+}
+
+@media screen and (max-width: #{var.$breakpoint-medium}) {
+  .booking-button-widget {
+    padding-left: var(--_padding);
+
+    span.icon,
+    span.nav__availability {
+      display: none;
+    }
+  }
+}
+
+
+
+@keyframes scale-up-down {
+
+  100% {
+    width: var(--_end-size);
+  }
+}

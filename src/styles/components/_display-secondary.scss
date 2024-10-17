@@ -1,0 +1,41 @@
+@use "../abstracts/variables" as var;
+
+.display-secondary {
+  --_fs: 200px;
+  --_lh: 10rem;
+  --_ml: 10vw;
+  --_ls: -0.72rem;
+  font-size: var(--_fs);
+  font-weight: var(--fw-Black);
+  letter-spacing: var(--_ls);
+  display: block;
+  width: min-content;
+  text-transform: uppercase;
+  line-height: var(--_lh);
+  margin-left: var(--_ml);
+  background: linear-gradient(var(--clr-500), var(--clr-600));
+  background-clip: text;
+  color: transparent;
+
+  &--mc {
+    width: max-content;
+  }
+}
+
+@media screen and (max-width: #{var.$breakpoint-large}) {
+  .display-secondary {
+    --_fs: 134px;
+    --_lh: 6.75rem;
+    --_ml: 3.5rem;
+    --_ls: -0.4rem;
+  }
+
+}
+
+@media screen and (max-width: #{var.$breakpoint-medium}) {
+  .display-secondary {
+    --_fs: 76px;
+    --_lh: 3.75rem;
+    --_ls: -0.2rem;
+  }
+}

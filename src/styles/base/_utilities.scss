@@ -1,0 +1,53 @@
+@use "../abstracts/variables" as vars;
+
+// typography
+@each $key, $value in vars.$font-family {
+  .ff-#{$key} {
+    font-family: var(--ff-#{$key});
+  }
+
+}
+
+@each $key, $value in vars.$display-sizes {
+  .#{$key} {
+    font-size: var(--#{$key});
+  }
+}
+
+@each $key, $value in vars.$font-sizes {
+  .fs-#{$key} {
+    font-size: var(--fs-#{$key});
+  }
+}
+
+@each $key, $value in vars.$font-weight {
+  .fw-#{$key} {
+    font-weight: var(--fw-#{$key});
+  }
+}
+
+// colors
+@each $key, $value in vars.$colors {
+  .bg-#{$key} {
+    background-color: var(--clr-#{$key});
+  }
+}
+
+@each $key, $value in vars.$colors {
+  .text-#{$key} {
+    color: var(--clr-#{$key});
+  }
+}
+
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

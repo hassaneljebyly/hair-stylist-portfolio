@@ -1,0 +1,17 @@
+.table {
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-200);
+  color: var(--clr-100);
+  text-align: left;
+  margin-top: 1em;
+  border-collapse: collapse;
+
+  &__td:not(:last-child) {
+    padding-block: 1em;
+    padding-right: 3em;
+  }
+
+  &__tr:nth-child(n + 3) {
+    border-top: 1px solid var(--clr-400);
+  }
+}

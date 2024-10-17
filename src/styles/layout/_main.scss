@@ -1,0 +1,192 @@
+@use "../abstracts/variables" as var;
+
+.main {
+  padding-top: 7.2em;
+  overflow: hidden;
+
+  &__carousel {
+    margin-top: -2em;
+  }
+
+  &__about {
+    margin-top: 7.30em;
+    padding-bottom: 7em;
+    overflow: hidden;
+  }
+
+  &__about-display {
+    margin-top: -.2em;
+  }
+
+  &__about-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4em;
+    max-height: 800px;
+    overflow: hidden;
+  }
+
+  &__about-image {
+    max-width: 825px;
+    justify-self: end;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__about-sash {
+    position: absolute;
+    top: 70%;
+    rotate: -20deg;
+  }
+
+  &__about-body {
+    width: 100%;
+    max-width: 65ch;
+    justify-self: end;
+    height: min-content;
+    padding-inline: #{var.$container-padding};
+
+    h2 {
+      margin-bottom: .6em;
+    }
+
+    p {
+      margin-bottom: 1em;
+      text-wrap: balance;
+    }
+  }
+
+  &__selected-work {
+    h2 {
+      margin-top: 1.45em;
+      margin-bottom: .85em;
+    }
+  }
+
+  &__selected-work-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2em;
+
+    img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      object-position: top;
+    }
+  }
+
+  &__contact {
+    padding-top: 10.2em;
+
+    h2 {
+      margin-bottom: .55em;
+    }
+
+    p {
+      margin-bottom: 1em;
+    }
+  }
+
+  &__pricing-table-header {
+    text-transform: uppercase;
+    margin-top: 3em;
+  }
+
+  &__pricing,
+  &__faq {
+    padding-top: 10.2em;
+    padding-bottom: 6em;
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+    }
+  }
+
+  &__faq-accordion {
+    max-width: 580px;
+  }
+
+  &__pricing-body,
+  &__faq-body {
+    p {
+      width: 100%;
+      max-width: 40ch;
+      margin-top: 3.5em;
+      text-wrap: balance;
+    }
+  }
+}
+
+
+@media screen and (max-width: #{var.$breakpoint-large}) {
+  .main {
+    &__about-content {
+      grid-template-columns: unset;
+      grid-template-rows: repeat(2, auto);
+      max-height: unset;
+    }
+
+    &__about {
+      padding-bottom: 0;
+    }
+
+    &__about-body {
+      max-width: 100ch;
+      justify-self: start;
+    }
+
+    &__about-image {
+      height: 500px;
+      max-width: unset;
+      justify-self: unset;
+    }
+
+    &__pricing,
+    &__faq {
+      .container {
+        flex-direction: column;
+        gap: 3em;
+      }
+    }
+
+    &__faq-accordion {
+      max-width: unset;
+    }
+
+    &__about-sash {
+      top: 70%;
+      left: 30%;
+    }
+
+    &__selected-work-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media screen and (max-width: #{var.$breakpoint-medium}) {
+  .main {
+    padding-top: 4.2em;
+
+    &__carousel {
+      margin-top: 0em;
+    }
+
+    &__selected-work-list {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &__about-sash {
+      top: 87%;
+      left: -10%;
+      rotate: 0deg;
+    }
+
+    &__contact-email {
+      font-size: var(--fs-300);
+    }
+  }
+}

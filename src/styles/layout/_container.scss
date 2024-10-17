@@ -1,0 +1,16 @@
+@use "../abstracts/variables" as var;
+
+.container {
+  --_max-width: 1200px;
+  --_padding: #{var.$container-padding};
+  margin-inline: auto;
+  width: min(var(--_max-width), 100% - var(--_padding, 2.5em));
+
+  &--large {
+    --_max-width: 1820px;
+  }
+
+  &--wide {
+    width: 100vw;
+  }
+}

@@ -1,0 +1,28 @@
+.sash {
+  --_gap: 2em;
+  --_item-width: 308.44px;
+  font-family: var(--ff-primary);
+  font-size: 24px; // so we can have fixed width, this makes the carousel easier
+  font-weight: var(--fw-ExtraBold);
+  text-transform: uppercase;
+  letter-spacing: -0.06em;
+  background-color: var(--clr-300);
+  color: var(--clr-700);
+  padding-block: .25em;
+  width: max-content;
+  animation: slide 10s linear infinite;
+
+  ul {
+    display: flex;
+    width: max-content;
+    gap: var(--_gap);
+    border-block: 2px solid var(--clr-700);
+    padding-block: .25em;
+  }
+}
+
+@keyframes slide {
+  100% {
+    transform: translateX(calc(-1*(var(--_item-width) + var(--_gap))));
+  }
+}

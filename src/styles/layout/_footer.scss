@@ -1,0 +1,67 @@
+@use "../abstracts/variables" as var;
+
+.footer {
+  --_padding-inline: 4.5em;
+  margin-top: -2em;
+  isolation: isolate;
+
+  &__links-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15em;
+    background-color: var(--clr-600);
+  }
+
+  &__address-list,
+  &__social-list {
+    padding: var(--_padding-inline);
+  }
+
+  &__social-list {
+    text-align: right;
+    border-left: 1px solid var(--clr-500);
+  }
+
+  &__list-item {
+    margin-bottom: 1.5em;
+  }
+
+  &__copyright {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 3em;
+    padding-bottom: 6em;
+    padding-inline: var(--_padding-inline);
+  }
+}
+
+@media screen and (max-width: #{var.$breakpoint-medium}) {
+  .footer {
+    --_padding-inline: 1em;
+    margin-top: -1em;
+
+    &__links-group {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
+    &__social-list {
+      text-align: left;
+      border-top: 1px solid var(--clr-500);
+      border-left: 0;
+    }
+
+    &__copyright {
+      flex-direction: column;
+      align-content: start;
+      align-items: unset;
+      gap: 1em;
+
+      a {
+        width: max-content;
+      }
+    }
+  }
+}

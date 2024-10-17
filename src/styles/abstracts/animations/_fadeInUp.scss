@@ -1,0 +1,24 @@
+.fade-in-up--paused {
+  opacity: 0;
+  transform: translateY(30%);
+  animation: none;
+}
+
+.fade-in-up--running {
+  animation: fadeInUp 1s ease forwards;
+
+}
+
+
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

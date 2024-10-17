@@ -1,0 +1,55 @@
+// typography
+
+$display-sizes: (
+  display-100: clamp(2.37rem, 5.29vi + 1.05rem, 5.28rem),
+  display-200: clamp(2.96rem, 7.41vi + 1.11rem, 7.03rem),
+  display-300: clamp(3.7rem, 10.32vi + 1.12rem, 9.38rem),
+  display-400: clamp(4.63rem, 14.32vi + 1.05rem, 12.5rem),
+  display-500: clamp(5.78rem, 19.78vi + 0.84rem, 16.66rem),
+  display-600: clamp(7.23rem, 27.24vi + 0.42rem, 22.21rem),
+  display-700: clamp(9.03rem, 37.41vi + -0.32rem, 29.61rem),
+  display-900: clamp(11.29rem, 51.23vi + -1.52rem, 39.47rem),
+);
+
+$font-sizes: (
+  100: clamp(0.8rem, 0.08vw + 0.78rem, 0.84rem),
+  200: clamp(1rem, 0.23vw + 0.94rem, 1.13rem),
+  300: clamp(1.25rem, 0.45vw + 1.14rem, 1.5rem),
+  400: clamp(1.56rem, 0.79vw + 1.36rem, 2rem),
+  500: clamp(1.95rem, 1.29vw + 1.63rem, 2.66rem),
+  600: clamp(2.44rem, 2.02vw + 1.94rem, 3.55rem),
+  700: clamp(3.05rem, 3.06vw + 2.29rem, 4.73rem),
+  900: clamp(3.81rem, 4.54vw + 2.68rem, 6.31rem),
+);
+
+$font-family: (
+  primary: 'Archivo, sans-serif',
+  secondary: 'Plus Jakarta Sans, sans-serif',
+);
+
+$font-weight: (
+  "ExtraLight": 200,
+  "Light": 300,
+  "Regular": 400,
+  "Medium": 500,
+  "SemiBold": 600,
+  "Bold": 700,
+  "ExtraBold": 800,
+  "Black": 900,
+);
+
+$colors: (
+  700: hsl(234, 100%, 4%),
+  600: hsl(231, 32%, 12%),
+  500: hsl(232, 8%, 36%),
+  400: hsl(230, 8%, 72%),
+  300: hsl(72, 88%, 62%),
+  200: hsl(72, 87%, 82%),
+  100: hsl(0, 0%, 100%),
+);
+
+
+$breakpoint-large : 1280px;
+$breakpoint-medium : 810px;
+
+$container-padding: 2.5em;

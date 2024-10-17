@@ -1,0 +1,93 @@
+.accordion {
+  --_acc-padding: 1.25em;
+  --_acc-content-color: var(--clr-500);
+  --_acc-content-fs: var(--fs-200);
+  --_acc-content-fw: var(--fw-Medium);
+  --_acc-header-color: var(--clr-700);
+  --_acc-header-fs: calc(var(--fs-200) + .25rem);
+  --_acc-header-fw: var(--fw-Medium);
+  --_acc-ff: var(--ff-secondary);
+  --_gtr-content: 0fr;
+  --_icon-rotate: 0deg;
+  width: 100%;
+  border-radius: 5px;
+
+  :has(:hover) {
+    --_acc-header-color: var(--clr-500);
+  }
+
+  >*+* {
+    border-top: 1px solid var(--clr-400);
+  }
+
+  &__panel {
+    position: relative;
+    display: grid;
+    grid-template-rows: auto var(--_gtr-content);
+    transition: grid-template-rows 150ms ease-in-out;
+  }
+
+  &__panel.open {
+    --_gtr-content: 1fr;
+    --_icon-rotate: 90deg;
+  }
+
+  &__heading {
+    padding-block: var(--_acc-padding);
+    position: relative;
+    /* on chrome the heading stretches on open, max-content fixes it */
+    height: max-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__title {
+    font-family: var(--_acc-ff);
+    font-size: var(--_acc-header-fs);
+    font-weight: var(--_acc-header-fw);
+    color: var(--_acc-header-color);
+    text-wrap: pretty;
+
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+
+  &__icon {
+    display: block;
+    position: relative;
+    width: 30px;
+    aspect-ratio: 1;
+  }
+
+  &__icon::before {
+    content: "";
+    position: absolute;
+    background-image: url("../../src/assets/icons/plus.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 15px;
+    aspect-ratio: 1;
+    top: 0;
+    right: 0;
+    translate: 0 50%;
+    rotate: var(--_icon-rotate);
+    transition: rotate 150ms ease-in-out;
+    transform-origin: center center;
+  }
+
+  &__p {
+    font-family: var(--_acc-ff);
+    font-size: var(--_acc-content-fs);
+    font-weight: var(--_acc-content-fw);
+    color: var(--_acc-content-color);
+    padding-block: var(--_acc-padding);
+    padding-right: 2em;
+  }
+
+  &__content {
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,28 @@
+.button {
+  font-size: calc(var(--fs-100) + .1rem);
+  font-weight: var(--fw-Black);
+  line-height: 1.1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--clr-700);
+  padding: .75rem 1.25rem;
+  border-radius: 50vh;
+  transition: background 150ms ease;
+
+  &--transparent {
+    background-color: rgba(hsl(231, 32%, 12%), .45);
+    font-size: var(--fs-100);
+    font-family: var(--fs-secondary);
+    font-weight: var(--fw-Medium);
+    color: var(--clr-100);
+    text-transform: none;
+  }
+
+  &--green {
+    background-color: var(--clr-300);
+  }
+
+  &:hover:not(&--transparent) {
+    background-color: var(--clr-200);
+  }
+}

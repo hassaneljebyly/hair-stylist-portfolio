@@ -1,0 +1,25 @@
+{
+  "name": "chloe-wade-portfolio",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "last 2 versions",
+    "Firefox ESR",
+    "not IE 11"
+  ],
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "sass": "^1.79.5",
+    "typescript": "^5.5.3",
+    "vite": "^5.4.8"
+  }
+}

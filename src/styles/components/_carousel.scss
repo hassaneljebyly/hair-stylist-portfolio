@@ -1,0 +1,49 @@
+@use "../abstracts/variables" as var;
+
+.carousel {
+  --_gap: 20px;
+  --_item-width: 600px;
+  --_item-hight: 450px;
+  display: flex;
+  gap: var(--_gap);
+  animation: slide_carousel 20s linear infinite;
+
+  &__item {
+    width: var(--_item-width);
+    height: var(--_item-hight);
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    filter: brightness(75%) saturate(140%);
+
+    img {
+      object-fit: fill;
+    }
+
+    span {
+      font-size: 5rem;
+    }
+  }
+}
+
+@media screen and (max-width: #{var.$breakpoint-large}) {
+  .carousel {
+    --_item-width: 500px;
+    --_item-hight: 340px;
+  }
+}
+
+@media screen and (max-width: #{var.$breakpoint-medium}) {
+  .carousel {
+    --_gap: 10px;
+    --_item-width: 272px;
+    --_item-hight: 204px;
+  }
+}
+
+@keyframes slide_carousel {
+  100% {
+    transform: translateX(calc(-4*(var(--_item-width) + var(--_gap))));
+  }
+}

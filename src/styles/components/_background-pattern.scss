@@ -1,0 +1,29 @@
+.background-pattern {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  width: 35vw;
+  top: 0;
+  left: 50vw;
+  translate: -50% 0;
+  z-index: -1;
+
+
+  li {
+    width: 2em;
+    background-image: url("../../src/assets/icons/ping_thingy.svg");
+    background-repeat: repeat-y;
+    background-size: 50%;
+    background-position: top center;
+    overflow: hidden;
+
+    &:nth-child(2n) {
+      margin-top: 20vh;
+    }
+
+    &:nth-child(2n + 1) {
+      margin-top: 10vh;
+    }
+  }
+}

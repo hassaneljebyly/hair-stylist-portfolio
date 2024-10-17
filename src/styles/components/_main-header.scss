@@ -1,0 +1,112 @@
+@use "../abstracts/variables" as var;
+
+.main__header {
+  --_fs-greeting: 24px;
+  --_fs-name: 112px;
+  --_fs-occupation: 200px;
+  --_fs-location: 24px;
+  // line hight
+  --_lh-name: 5.7rem;
+  --_lh-occupation: 10rem;
+  // margin-left
+  --_ml-occupation: 15.5rem;
+  --_ml-location: 1.7em;
+  // margin-top
+  --_mt-location: 2.75em;
+  // letter-spacing
+  --_ls-name: -0.45rem;
+  --_ls-occupation: -0.72rem;
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-Black);
+  text-transform: uppercase;
+  letter-spacing: -.06rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, auto);
+  color: var(--clr-600);
+
+  &--greeting {
+    font-size: var(--_fs-greeting);
+    margin-bottom: .67em;
+  }
+
+  &--name {
+    font-size: var(--_fs-name);
+    letter-spacing: var(--_ls-name);
+    line-height: var(--_lh-name);
+    margin-bottom: .16em;
+  }
+
+  &--occupation {
+    font-size: var(--_fs-occupation);
+    letter-spacing: var(--_ls-occupation);
+    line-height: var(--_lh-occupation);
+    margin-left: var(--_ml-occupation);
+    width: min-content;
+    background: linear-gradient(var(--clr-600), var(--clr-100));
+    background-clip: text;
+    color: transparent;
+  }
+
+  &--br-span {
+    display: none;
+  }
+
+  &--location {
+    font-size: var(--_fs-location);
+    width: min-content;
+    margin-top: var(--_mt-location);
+    margin-left: var(--_ml-location);
+    align-self: center;
+    background: linear-gradient(var(--clr-600), var(--clr-400));
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+
+@media screen and (max-width: #{var.$breakpoint-large}) {
+  .main__header {
+    --_fs-greeting: 20px;
+    --_fs-name: 80px;
+    --_fs-occupation: 134px;
+    --_fs-location: 20px;
+    // line hight
+    --_lh-name: 4rem;
+    --_lh-occupation: 6.75rem;
+    // margin-left
+    --_ml-occupation: 3.5rem;
+    // letter-spacing
+    --_ls-name: -0.25rem;
+    --_ls-occupation: -0.4rem;
+
+  }
+
+}
+
+@media screen and (max-width: #{var.$breakpoint-medium}) {
+  .main__header {
+    --_fs-name: 48px;
+    --_fs-occupation: 76px;
+    // line hight
+    --_lh-name: 2.45rem;
+    --_lh-occupation: 3.75rem;
+    // letter-spacing
+    --_ls-name: -0.2rem;
+    --_ls-occupation: -0.2rem;
+    // margin-top
+    --_mt-location: 0em;
+    // margin-left
+    --_ml-location: 9.25em;
+
+    &--br-span {
+      display: inline;
+    }
+
+    &--location {
+      background: unset;
+      background-clip: unset;
+      color: var(--clr-400);
+    }
+  }
+}

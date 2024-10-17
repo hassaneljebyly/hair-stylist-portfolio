@@ -1,0 +1,10 @@
+.nav {
+  padding-top: 1.55em;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+}

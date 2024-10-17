@@ -1,0 +1,26 @@
+@use "../abstracts/variables" as vars;
+
+:root {
+
+  // typography
+  @each $key, $value in vars.$font-family {
+    --ff-#{$key}: #{$value};
+  }
+
+  @each $key, $value in vars.$display-sizes {
+    --#{$key}: #{$value};
+  }
+
+  @each $key, $value in vars.$font-sizes {
+    --fs-#{$key}: #{$value};
+  }
+
+  @each $key, $value in vars.$font-weight {
+    --fw-#{$key}: #{$value};
+  }
+
+  // colors
+  @each $key, $value in vars.$colors {
+    --clr-#{$key}: #{$value};
+  }
+}

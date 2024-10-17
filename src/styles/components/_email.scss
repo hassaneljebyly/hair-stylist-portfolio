@@ -1,0 +1,32 @@
+.email {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-500);
+  font-weight: var(--fw-Black);
+  text-transform: uppercase;
+  letter-spacing: -.15rem;
+  text-decoration: underline;
+  color: var(--clr-300);
+  display: inline-block;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 70%;
+    aspect-ratio: 1;
+    right: -1.5em;
+    top: 50%;
+    translate: 0 -50%;
+    background-image: url("../../src/assets/icons/link_email_arrow.svg");
+    transform-origin: center;
+    transition: transform 150ms ease;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:hover::after {
+    transform: rotateZ(45deg);
+  }
+}
