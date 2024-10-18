@@ -28,4 +28,4 @@
 
 - Family: [Plus Jakarta Sans](https://fonts.google.com/specimen/Plus+Jakarta+Sans)
 - Family: [Archivo](https://fonts.google.com/specimen/Archivo)
-- Weights: 400, 500, 700
+- Weights: 500, 700, 800, 900

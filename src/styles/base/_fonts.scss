@@ -1,0 +1,65 @@
+@font-face {
+  font-display: swap;
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../../src/assets/fonts/primary/Archivo-Medium.woff2') format('woff2'),
+    url('../../src/assets/fonts/primary/Archivo-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../../src/assets/fonts/primary/Archivo-Bold.woff2') format('woff2'),
+    url('../../src/assets/fonts/primary/Archivo-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 800;
+  src: url('../../src/assets/fonts/primary/Archivo-ExtraBold.woff2') format('woff2'),
+    url('../../src/assets/fonts/primary/Archivo-ExtraBold.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 900;
+  src:
+    url('../../src/assets/fonts/primary/Archivo-Black.woff2') format('woff2') url('../../src/assets/fonts/primary/Archivo-Black.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 500;
+  src:
+    url('../../src/assets/fonts/secondary/PlusJakartaSans-Medium.woff2') format('woff2'),
+    url('../../src/assets/fonts/secondary/PlusJakartaSans-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 700;
+  src:
+    url('../../src/assets/fonts/secondary/PlusJakartaSans-Bold.woff2') format('woff2'),
+    url('../../src/assets/fonts/secondary/PlusJakartaSans-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 800;
+  src:
+    url('../../src/assets/fonts/secondary/PlusJakartaSans-ExtraBold.woff2') format('woff2'),
+    url('../../src/assets/fonts/secondary/PlusJakartaSans-ExtraBold.woff') format('woff');
+}

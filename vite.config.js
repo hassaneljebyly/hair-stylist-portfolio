@@ -1,9 +1,16 @@
 import { defineConfig } from 'vite';
+import { createHtmlPlugin } from 'vite-plugin-html';
 
 export default defineConfig({
-  base: '/hair-stylist-portfolio/build/', // Change to the name of your repository
+  base: '/hair-stylist-portfolio/build/',
   build: {
-    outDir: 'build', // Ensure your build output goes to a specific directory
+    outDir: 'build',
     emptyOutDir: true,
+    assetsInlineLimit: 0,
   },
+  plugins: [
+    createHtmlPlugin({
+      minify: true,
+    }),
+  ],
 });

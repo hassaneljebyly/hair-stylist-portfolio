@@ -6,7 +6,7 @@
   --_item-hight: 450px;
   display: flex;
   gap: var(--_gap);
-  animation: slide_carousel 20s linear infinite;
+  animation: slide_carousel 40s linear infinite;
 
   &__item {
     width: var(--_item-width);
